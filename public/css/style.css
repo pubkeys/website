@@ -187,7 +187,7 @@ ul.nav.navbar {
     font-family: 'Stint Ultra Condensed', cursive;
     position: relative;
     font-weight: 100;
-    padding: .5em 1.5em;
+    padding: .5em .35em;
 }
 
 .nav > li > a:hover, .nav > li > a:focus {
@@ -2221,4 +2221,8 @@ h3.title, h2.title {
 
 h3.codeTitle {
     font-size: 43px;
+}
+
+#gallery {
+    background: #E5E5E5;
 }
