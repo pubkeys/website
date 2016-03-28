@@ -10,24 +10,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <title>PubKeys | Home</title>
     <!--mobile apps-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content=""/>
 
 
     <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
     <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
     <link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/prisim.css" rel="stylesheet" type="text/css" media="all">
     <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Stint+Ultra+Condensed' rel='stylesheet' type='text/css'>
 
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/classie.js"></script>
+    <script src="js/prisim.js"></script>
     <script src="js/js.js"></script>
 </head>
 <body>
 <!--banner-->
-<div  id="home" class="banner">
+<div id="home" class="banner">
     <div class="banner-info">
 
         <div class="banner-text">
@@ -49,12 +51,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <li class="menu-item menu-item-current"><a href="#home" class="menu-link scroll">Home</a></li>
                             <li class="menu-item"><a href="#about" class="menu-link scroll">About</a></li>
                             <li class="menu-item"><a href="#services" class="menu-link scroll">Services</a></li>
-                            <li class="menu-item"><a href="#work" class="menu-link scroll">Works</a></li>
+                            <li class="menu-item"><a href="#work" class="menu-link scroll">Profile</a></li>
                             <li class="menu-item"><a href="#gallery" class="menu-link scroll">Gallery</a></li>
                             <li class="menu-item"><a href="#contact" class="menu-link scroll">Contact</a></li>
                         </ul>
                     </div>
-                    <div class="clearfix"> </div>
+                    <div class="clearfix"></div>
                 </div>
 
             </div>
@@ -75,7 +77,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <h4>Generate</h4>
             <p>generate public key in your computer</p>
         </div>
-        <div class="clearfix"> </div>
+        <div class="clearfix"></div>
         <div class="col-md-7 welcome-bottom-left wow slideInLeft animated" data-wow-delay=".5s">
             <img src="images/upload.png" alt=""/>
             <h5>02</h5>
@@ -91,45 +93,40 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <h4>Use</h4>
                 <p>use it with our pky commend to add / remove / update keys in your system</p>
             </div>
-            <div class="clearfix"> </div>
+            <div class="clearfix"></div>
         </div>
-        <div class="clearfix"> </div>
+        <div class="clearfix"></div>
     </div>
 </div>
 <!--//welcome-->
 <!--services-->
 <div class="welcome services" id="services">
     <div class="container">
-        <h3 class="title wow fadeInDown animated" data-wow-delay=".5s">Our Services</h3>
+        <h3 class="title wow fadeInDown animated" data-wow-delay=".5s">How To</h3>
         <div class="services-info">
-            <div class="col-md-4 services-grids wow zoomIn animated" data-wow-delay=".5s">
-                <div class="service">
-                    <div class="icon-holder">
-                        <span class="glyphicon glyphicon-book"></span>
-                    </div>
-                    <h4 class="heading">Skill Development</h4>
-                    <p class="text">Vestibulum velit dolor pulvinar ut tempus sit amet, congue eget velit</p>
-                </div>
-            </div>
-            <div class="col-md-4 services-grids wow zoomIn animated" data-wow-delay=".5s">
-                <div class="service">
-                    <div class="icon-holder">
-                        <span class="glyphicon glyphicon-education"></span>
-                    </div>
-                    <h4 class="heading">Student Guidance</h4>
-                    <p class="text">Tibulumves velit dolor pulvinar ut tempus sit amet, congue eget velit</p>
-                </div>
-            </div>
-            <div class="col-md-4 services-grids wow zoomIn animated" data-wow-delay=".5s">
-                <div class="service">
-                    <div class="icon-holder">
-                        <span class="glyphicon glyphicon-thumbs-up"></span>
-                    </div>
-                    <h4 class="heading"> Advising Students</h4>
-                    <p class="text">Dolor vestibulum velit pulvinar ut tempus sit amet, congue eget velit</p>
-                </div>
-            </div>
-            <div class="clearfix"> </div>
+
+            <h3 class="codeTitle">example:</h3>
+            <pre><code class="language-bash">
+                    $server: pubkeys add example@example.com # add the key to the authorized_keys
+                    $server: pubkeys add example@example.com -u exampleUser # add the key to the authorized_keys for exampleUser
+                </code></pre>
+            <h3 class="codeTitle">full usage:</h3>
+            <pre class="line-numbers"><code class="language-markup">
+                    usage: $NAME command options
+
+                    This script mannages your public keys.
+
+                    Commands:
+                    add - Add public key(s) to your authorized_keys file
+                    get - Echo public key(s)
+                    remove - Remove public key(s) from your authorized_keys file
+
+                    OPTIONS:
+                    -h Show this help message
+                    -u specify user, default is current user
+                    -v Display Version and exit
+                </code></pre>
+            <div class="clearfix"></div>
         </div>
     </div>
 </div>
@@ -139,43 +136,45 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <div class="container">
         <div class="work-info">
             <div class="col-md-3 work-grids work-grd1 wow slideInLeft animated" data-wow-delay=".5s">
-                <h3 class="title">Work</h3>
-                <p>Aenean sed euismod sem ac iaculis metus congue eget velit, Nulla pharetra lacus sed ac iaculis metus auctor sollicitudin. Donec molestie augue a eros auctor aliquam. In vitae posuere massa. </p>
+                <h3 class="title">Developers</h3>
+                <p>the ones who behind this project.</p>
+                <p>they believe in:</p>
                 <ul>
-                    <li><span class="glyphicon glyphicon-ok-circle"></span> Lorem ipsum dolor sit </li>
-                    <li><span class="glyphicon glyphicon-ok-circle"></span> Morbi pretium lacus neque</li>
-                    <li><span class="glyphicon glyphicon-ok-circle"></span> Phasellus posuere nisi ve</li>
-                    <li><span class="glyphicon glyphicon-ok-circle"></span> Etiam blandit orci blandit</li>
+                    <li><span class="glyphicon glyphicon-ok-circle"></span> Simplicity</li>
+                    <li><span class="glyphicon glyphicon-ok-circle"></span> Honesty</li>
+                    <li><span class="glyphicon glyphicon-ok-circle"></span> professionalism</li>
+                    <li><span class="glyphicon glyphicon-ok-circle"></span> Drink a lot of coffee</li>
                 </ul>
             </div>
             <div class="col-md-3 work-grids wow zoomIn animated" data-wow-delay=".5s">
-                <img src="images/img4.jpg" alt=""/>
+                <img src="images/biny.png" alt=""/>
                 <div class="img-caption">
                     <div class="img-text">
-                        <h4>Lorem ipsum</h4>
-                        <p>Etiam pellentesque felis dolor quis efficitur eros </p>
+                        <h4>Biny</h4>
+                        <p>JAVA, PHP, C/C++, Front-End</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-3 work-grids wow zoomIn animated" data-wow-delay=".5s">
-                <img src="images/img5.jpg" alt=""/>
+                <img src="images/mordi.png" alt=""/>
                 <div class="img-caption">
                     <div class="img-text">
-                        <h4>Euismod sem </h4>
-                        <p>Vestibulum celit dolor pulvinar ut tempus sit amet </p>
+                        <h4>Mordi</h4>
+                        <p>PHP, SQL, JavaScript, Back-End</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-3 work-grids wow zoomIn animated" data-wow-delay=".5s">
-                <img src="images/img6.jpg" alt=""/>
+                <img src="images/eli.png" alt=""/>
                 <div class="img-caption">
                     <div class="img-text">
-                        <h4>Cras maximus</h4>
-                        <p>Suspendi ipsum magna ut luctus eget condimentum </p>
+                        <h4>Eli</h4>
+                        <p>PHP, C#, ASP.net</p>
+                        <p>Back-End</p>
                     </div>
                 </div>
             </div>
-            <div class="clearfix"> </div>
+            <div class="clearfix"></div>
         </div>
     </div>
 </div>
@@ -439,28 +438,28 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </li>
                         <li class="item4 wow fadeInDown animated" data-wow-delay=".5s"><a href="#"><span class="glyphicon glyphicon-chevron-down"></span> Sed diam nonummy nibh euismod</a>
                             <ul>
-                                <li class="subitem1"><p>At vero eos et Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod  </p></li>
+                                <li class="subitem1"><p>At vero eos et Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod </p></li>
                             </ul>
                         </li>
                     </ul>
                     <!-- script for tabs -->
                     <script type="text/javascript">
-                        $(function() {
+                        $(function () {
 
                             var menu_ul = $('.faq > li > ul'),
-                                    menu_a  = $('.faq > li > a');
+                                    menu_a = $('.faq > li > a');
 
                             menu_ul.hide();
 
-                            menu_a.click(function(e) {
+                            menu_a.click(function (e) {
                                 e.preventDefault();
-                                if(!$(this).hasClass('active')) {
+                                if (!$(this).hasClass('active')) {
                                     menu_a.removeClass('active');
                                     menu_ul.filter(':visible').slideUp('normal');
-                                    $(this).addClass('active').next().stop(true,true).slideDown('normal');
+                                    $(this).addClass('active').next().stop(true, true).slideDown('normal');
                                 } else {
                                     $(this).removeClass('active');
-                                    $(this).next().stop(true,true).slideUp('normal');
+                                    $(this).next().stop(true, true).slideUp('normal');
                                 }
                             });
 
@@ -474,13 +473,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
         <div class="contact-form">
             <h3 class="title wow fadeInDown animated" data-wow-delay=".5s">Get In Touch</h3>
-            <p>Sed ut turpis elit ullamcorper in auctor non, accumsan vel lacus nulla auctor cursus nunc. Maecenas ultricies dolor in urna tempus, id egestas erat finibus  interdum lectus eget scelerisque.</p>
+            <p>send us a note, tip, bug and fixes, anyway we like to here from you</p>
             <form class="wow fadeInUp animated" data-wow-delay=".5s">
                 <input type="text" placeholder="Name" required="">
                 <input class="email" type="text" placeholder="Email" required="">
                 <input type="text" placeholder="Phone" required="">
                 <textarea placeholder="Message" required=""></textarea>
-                <input class="wow zoomIn animated" data-wow-delay=".5s" type="submit" value="SUBMIT" >
+                <input class="wow zoomIn animated" data-wow-delay=".5s" type="submit" value="SUBMIT">
             </form>
 
         </div>
@@ -491,27 +490,25 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="welcome footer">
     <div class="container">
         <div class="col-md-4 footer-grids wow fadeInLeft animated" data-wow-delay=".5s">
-            <h3>Review</h3>
-            <p>Sed ut turpis elit ullamcorper in auctor non, accumsan vel lacus nulla auctor cursus nunc. Maecenas ultricies dolor in urna tempus, id egestas erat finibus  interdum lectus eget scelerisque.</p>
+            <h3>Thanks</h3>
+            <p><a href="https://msby.org">msby.org</a></p>
+            <p><a href="http://msby.net">msby.net</a></p>
+            <p><a href="http://yawitz.net">yawitz.net</a></p>
+            <p><a href="http://stuff-group.com">stuff-group.com</a></p>
+            <p></p>
+            <p></p>
         </div>
         <div class="col-md-3 footer-grids wow fadeInLeft animated" data-wow-delay=".5s">
-            <h3>Contact Me</h3>
-            <p>111-2nd Avenue Canada.<br>
-                New York City USA.<br>
-                Office : +00 111 1111 111<br>
-                Support to : <a href="mailto:info@example.com">mail@example.com</a>
-            </p>
+            <h3>Privacy Policy</h3>
+            <p>fffeqf </p>
         </div>
         <div class="col-md-5 footer-grids wow fadeInRight animated" data-wow-delay=".5s">
-            <h3>Newsletter</h3>
-            <form>
-                <input type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-                <input type="submit" value="Submit">
-            </form>
+            <h3>Terms Of Use</h3>
+            <p>license under MIT + all of the services are provide AS IS</p>
         </div>
-        <div class="clearfix"> </div>
+        <div class="clearfix"></div>
         <div class="footer-copy wow slideInUp animated" data-wow-delay=".5s">
-            <p>© 2016 Scrutiny. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+            <p>© {{ Date('Y') }} PubKeys. All rights opens | Design by <a href="http://w3layouts.com">W3layouts</a> | Graphics by <a href="http://www.freepik.com/">FreePik.com</a></p>
         </div>
     </div>
 </div>
