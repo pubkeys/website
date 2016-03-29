@@ -15,7 +15,7 @@ class CreateKeysTable extends Migration
         Schema::create('keys', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->string('email');
+            $table->string('email')->unique();
             $table->text('key');
             $table->string('token');
             $table->boolean('compromised')->default(false);

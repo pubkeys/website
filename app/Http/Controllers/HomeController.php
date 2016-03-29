@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Key;
+
 class HomeController extends Controller
 {
     public function index()
